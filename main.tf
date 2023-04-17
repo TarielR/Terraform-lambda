@@ -1,6 +1,6 @@
 resource "aws_lambda_function" "this" {
   filename      = "lambda_function_payload.zip"
-  function_name = "cdisney_mok"
+  function_name = "disney_mock"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "lambda.run"
 
