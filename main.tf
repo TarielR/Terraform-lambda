@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "this" {
-  filename      = "lambda_function_payload.zip"
+  filename      = data.archive_file.lambda_zip.output_path
   function_name = "disney_mock"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "lambda.run"
